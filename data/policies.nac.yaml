@@ -1,0 +1,43 @@
+fmc:
+  domains:
+    - name: Global
+
+      policies:
+
+        access_control_policies:
+          - name: MyAccessPolicyName1
+            default_action: BLOCK
+
+            categories:
+              - name: MyCategoryName1
+                section: mandatory
+
+            access_rules:
+              - name: MyAccessRuleName1
+                action: ALLOW
+                category: MyCategoryName1
+                source_zones:
+                  - MySecurityZoneName1
+                destination_zones:
+                  - MySecurityZoneName2
+                source_network_objects:
+                  - MyNetworkName1
+                destination_network_objects:
+                  - MyHostName1
+                destination_port_objects:
+                  - MyPortName1
+                intrusion_policy: Balanced Security and Connectivity
+
+              - name: MyAccessRuleName2
+                action: ALLOW
+                category: MyCategoryName1
+                source_zones:
+                  - MySecurityZoneName1
+                destination_zones:
+                  - MySecurityZoneName1
+                source_network_objects:
+                  - MyNetworkGroupName1
+                destination_network_literals:
+                  - 10.20.30.0/24
+                destination_port_objects:
+                  - MyPortName1

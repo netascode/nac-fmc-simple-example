@@ -1,0 +1,15 @@
+---
+existing:
+  fmc:
+    domains:
+      - name: Global
+
+        objects:
+
+          networks:
+            - name: any-ipv4
+
+        policies:
+        
+          intrusion_policies:
+            - name: Balanced Security and Connectivity

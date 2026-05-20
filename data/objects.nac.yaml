@@ -1,0 +1,35 @@
+---
+fmc:
+  domains:
+    - name: Global
+
+      objects:
+
+        hosts:
+          - name: MyHostName1
+            ip: 10.10.10.1
+          - name: MyHostName2
+            ip: 10.20.20.20
+
+        networks:
+          - name: MyNetworkName1
+            prefix: 10.10.100.0/24
+
+        network_groups:
+          - name: MyNetworkGroupName1
+            objects:
+              - MyHostName1
+              - any-ipv4
+          - name: MyNetworkGroupName2
+            objects:
+              - MyNetworkGroupName1
+              - MyHostName2
+
+        ports:
+          - name: MyPortName1
+            port: 8080
+            protocol: TCP
+
+        security_zones:
+          - name: MySecurityZoneName1
+          - name: MySecurityZoneName2
