@@ -5,7 +5,9 @@ This example is part of the Cisco [Network as Code](https://netascode.cisco.com)
 
 ## Quick start
 1. Clone this repository
-2. Update the `provider` section in `main.tf` with your device credentials
+2. Update the `provider` section in `main.tf` with credentials. Review [provider documentation](https://registry.terraform.io/providers/CiscoDevNet/fmc/latest/docs) for details.
+- `username`, `password` and `url` for FMC
+- `token` and `url` for cdFMC
 3. Initialize Terraform using `terraform init` command
 4. Push configuration to your device using `terraform apply` command
 5. Review [data model documentation](https://netascode.cisco.com/docs/data_models/fmc/overview/) that describes available configuration options

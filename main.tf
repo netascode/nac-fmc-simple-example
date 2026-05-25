@@ -7,9 +7,14 @@ terraform {
 }
 
 provider "fmc" {
-  username = "username"
-  password = "password"
-  url      = "https://fmc_hostname_or_ip"
+  url = "https://fmc_hostname_or_ip"
+
+  # FMC
+  # username = "username"
+  # password = "password"
+
+  # cdFMC
+  # token = "token"
 }
 
 module "fmc" {
